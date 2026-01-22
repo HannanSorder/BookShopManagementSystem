@@ -1,0 +1,128 @@
+/* Navigation Bar Styles */
+.navbar {
+  padding: 0.75rem 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+  .navbar-brand:hover {
+    transform: scale(1.05);
+    color: #ffc107 !important;
+  }
+
+  .navbar-brand i {
+    font-size: 1.8rem;
+  }
+
+/* Navigation Links */
+.nav-link {
+  font-weight: 500;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  margin: 0 5px;
+}
+
+  .nav-link:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+  }
+
+  .nav-link.active {
+    background: rgba(255, 193, 7, 0.3);
+    border-bottom: 3px solid #ffc107;
+    font-weight: 600;
+  }
+
+  .nav-link i {
+    font-size: 1.1rem;
+  }
+
+/* Search Box */
+.input-group .form-control {
+  border: none;
+  border-radius: 25px 0 0 25px;
+  padding: 0.5rem 1rem;
+}
+
+  .input-group .form-control:focus {
+    box-shadow: none;
+    border-color: #ffc107;
+  }
+
+.input-group .btn-warning {
+  border-radius: 0 25px 25px 0;
+  padding: 0.5rem 1.2rem;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+  .input-group .btn-warning:hover {
+    background: #ffb300;
+    transform: scale(1.05);
+  }
+
+/* Buttons */
+.btn-outline-light {
+  border-radius: 20px;
+  padding: 0.4rem 1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+  .btn-outline-light:hover {
+    background: white;
+    color: #0d6efd;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
+  }
+
+.btn-light {
+  border-radius: 20px;
+  padding: 0.4rem 1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+  .btn-light:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+
+/* Badge on Cart */
+.badge {
+  font-size: 0.7rem;
+  padding: 0.25rem 0.4rem;
+}
+
+/* Mobile Responsive */
+@media (max-width: 991px) {
+  .navbar-collapse {
+    background: rgba(13, 110, 253, 0.95);
+    padding: 1rem;
+    border-radius: 10px;
+    margin-top: 1rem;
+  }
+
+  .nav-link {
+    margin: 0.5rem 0;
+  }
+
+  form.d-flex {
+    max-width: 100% !important;
+    margin: 1rem 0;
+  }
+
+  .d-flex.align-items-center.gap-2 {
+    margin-top: 1rem;
+    justify-content: center;
+  }
+}
+
+/* Sticky Navbar */
+.sticky-top {
+  z-index: 1030;
+}

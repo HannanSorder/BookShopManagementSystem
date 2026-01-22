@@ -1,0 +1,89 @@
+<div class="container mt-4">
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <h2 class="text-primary fw-bold">
+      <i class="bi bi-book-fill"></i> Book List
+    </h2>
+    <button class="btn btn-success btn-lg" [routerLink]="['/addBook']">
+      <i class="bi bi-plus-lg"></i> Add New Book
+    </button>
+  </div>
+
+  <div class="row">
+    <div class="col-12">
+      <div class="table-responsive shadow-lg rounded">
+        <table class="table table-hover mb-0">
+          <thead class="table-dark">
+            <tr>
+              <th>Book Category</th>
+              <th class="text-center">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of bookList">
+              <td>
+                <div class="category-header mb-3">
+                  <span class="badge bg-primary fs-5 py-2 px-4">
+                    <i class="bi bi-tag-fill"></i> {{item.name}}
+                  </span>
+                </div>
+
+                <div *ngIf="item.books && item.books.length > 0" class="ms-3">
+                  <table class="table table-sm table-striped table-bordered">
+                    <thead class="table-light">
+                      <tr>
+                        <th>Image</th> <!-- 🆕 NEW COLUMN -->
+                        <th>Book ID</th>
+                        <th>Title</th>
+                        <th>ISBN</th>
+                        <th>Author</th>
+                        <th>Publisher</th>
+                        <th>Purchase Price</th>
+                        <th>Selling Price</th>
+                        <th>Pages</th>
+                        <th>Stock</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let b of item.books">
+                        <!-- 🆕 NEW: Image Column -->
+                        <td>
+                          <img [src]="getImageUrl(b.imageUrl)"
+                               [alt]="b.title"
+                               class="img-thumbnail"
+                               style="width: 60px; height: 80px; object-fit: cover;"
+                               (error)="$any($event.target).src='assets/images/no-image.jpg'">
+                        </td>
+                        <td>{{b.bookID}}</td>
+                        <td class="fw-bold">{{b.title}}</td>
+                        <td>{{b.isbn}}</td>
+                        <td>{{b.author}}</td>
+                        <td>{{b.publisher}}</td>
+                        <td class="text-success fw-bold">৳{{b.purchasePrice}}</td>
+                        <td class="text-primary fw-bold">৳{{b.sellingPrice}}</td>
+                        <td>{{b.pages}}</td>
+                        <td><span class="badge bg-info">{{b.stock}}</span></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <div *ngIf="!item.books || item.books.length === 0" class="text-muted fst-italic ms-3">
+                  <i class="bi bi-info-circle"></i> No books in this category.
+                </div>
+              </td>
+
+              <td class="align-middle text-center">
+                <a [routerLink]="['/addBook', 'edit', item.bookCategoryID]" class="btn btn-primary btn-sm mb-2 w-100">
+                  <i class="bi bi-pencil-fill"></i> Edit
+                </a>
+                <button class="btn btn-danger btn-sm w-100" (click)="deleteItem(item)">
+                  <i class="bi bi-trash-fill"></i> Delete
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

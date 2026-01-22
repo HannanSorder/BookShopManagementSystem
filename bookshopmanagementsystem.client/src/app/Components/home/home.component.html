@@ -1,0 +1,281 @@
+<!-- Hero Banner -->
+<div class="hero-slider">
+  <div class="container">
+    <div class="row align-items-center">
+      <!-- Left Side - Text Content -->
+      <div class="col-lg-6 col-md-12">
+        <div class="hero-content">
+          <h1>Welcome to Smart Bookshop</h1>
+          <h2>Smart Bookshop Management System</h2>
+          <p>Manage your bookstore easily and efficiently with our smart solution</p>
+          <button class="btn btn-warning btn-lg hero-btn shadow-lg" [routerLink]="['/books']">
+            <i class="bi bi-arrow-right-circle"></i> Explore Now
+          </button>
+        </div>
+      </div>
+
+      <!-- Right Side - Book Display -->
+      <div class="col-lg-6 col-md-12">
+        <div class="book-showcase">
+          <!-- Decorative Lamps -->
+          <div class="lamp lamp-1">
+            <i class="bi bi-lightbulb-fill"></i>
+          </div>
+          <div class="lamp lamp-2">
+            <i class="bi bi-lightbulb-fill"></i>
+          </div>
+          <div class="lamp lamp-3">
+            <i class="bi bi-lightbulb-fill"></i>
+          </div>
+
+          <!-- 3D Book -->
+          <div class="book-3d">
+            <div class="book-spine"></div>
+            <div class="book-cover">
+              <div class="book-design">
+                <div class="book-pattern"></div>
+                <div class="book-title-section">
+                  <h3>Smart</h3>
+                  <h2>Bookshop</h2>
+                  <p>Management System</p>
+                </div>
+                <div class="book-author">by Smart Team</div>
+              </div>
+            </div>
+            <div class="book-pages"></div>
+          </div>
+
+          <!-- Floating Elements -->
+          <div class="floating-element circle-1"></div>
+          <div class="floating-element circle-2"></div>
+          <div class="floating-element circle-3"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Popular Categories -->
+<div class="category-section">
+  <div class="container">
+    <div class="section-title">
+      <h2>Browse Popular Books</h2>
+      <p>Explore books from different categories</p>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-lg-4 col-md-6">
+        <div class="category-card" [routerLink]="['/books']">
+          <div class="category-icon">
+            <i class="bi bi-heart-pulse-fill"></i>
+          </div>
+          <h4 class="category-title">Medical Books</h4>
+          <p class="category-subtitle">All medical science books</p>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+        <div class="category-card success" [routerLink]="['/books']">
+          <div class="category-icon">
+            <i class="bi bi-building"></i>
+          </div>
+          <h4 class="category-title">Engineering Books</h4>
+          <p class="category-subtitle">Engineering and technology books</p>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+        <div class="category-card warning" [routerLink]="['/books']">
+          <div class="category-icon">
+            <i class="bi bi-palette-fill"></i>
+          </div>
+          <h4 class="category-title">Art & Design</h4>
+          <p class="category-subtitle">Writing and art supplies</p>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+        <div class="category-card info" [routerLink]="['/books']">
+          <div class="category-icon">
+            <i class="bi bi-book"></i>
+          </div>
+          <h4 class="category-title">General Knowledge</h4>
+          <p class="category-subtitle">General knowledge and information</p>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+        <div class="category-card danger" [routerLink]="['/books']">
+          <div class="category-icon">
+            <i class="bi bi-code-slash"></i>
+          </div>
+          <h4 class="category-title">Programming</h4>
+          <p class="category-subtitle">Computer programming books</p>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+        <div class="category-card purple" [routerLink]="['/books']">
+          <div class="category-icon">
+            <i class="bi bi-tools"></i>
+          </div>
+          <h4 class="category-title">Product Collection</h4>
+          <p class="category-subtitle">Various product collections</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Stats Section -->
+<div class="stats-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3 col-6">
+        <div class="stat-box">
+          <i class="bi bi-folder-fill"></i>
+          <div class="stat-number">{{totalCategories}}</div>
+          <div class="stat-label">Total Categories</div>
+        </div>
+      </div>
+      <div class="col-md-3 col-6">
+        <div class="stat-box">
+          <i class="bi bi-book"></i>
+          <div class="stat-number">{{totalBooks}}</div>
+          <div class="stat-label">Total Books</div>
+        </div>
+      </div>
+      <div class="col-md-3 col-6">
+        <div class="stat-box">
+          <i class="bi bi-boxes"></i>
+          <div class="stat-number">{{totalStock}}</div>
+          <div class="stat-label">Stock Quantity</div>
+        </div>
+      </div>
+      <div class="col-md-3 col-6">
+        <div class="stat-box">
+          <i class="bi bi-currency-dollar"></i>
+          <div class="stat-number">৳{{totalValue}}</div>
+          <div class="stat-label">Total Value</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="footer-section">
+  <div class="container py-5">
+    <div class="row g-4">
+      <!-- Company Info -->
+      <div class="col-lg-3 col-md-6">
+        <h5 class="footer-title">Address</h5>
+        <div class="footer-content">
+          <p><i class="bi bi-geo-alt-fill me-2"></i>235/5 Daffodil International Academy (DIA)</p>
+          <p><i class="bi bi-geo-alt me-2"></i>West Panthopath, Dhaka-1217</p>
+          <p><i class="bi bi-geo-alt me-2"></i>Bangladesh</p>
+          <p class="mt-3">
+            <a href="mailto:info&#64;smartbookshop.com" class="footer-link">
+              <i class="bi bi-envelope-fill me-2"></i>info&#64;smartbookshop.com
+            </a>
+          </p>
+        </div>
+      </div>
+
+      <!-- Contact -->
+      <div class="col-lg-3 col-md-6">
+        <h5 class="footer-title">Contact</h5>
+        <div class="footer-content">
+          <p><a href="tel:09712810106" class="footer-link"><i class="bi bi-telephone-fill me-2"></i>09712810106</a></p>
+          <p><a href="tel:01712810106" class="footer-link"><i class="bi bi-phone-fill me-2"></i>01712810106</a></p>
+          <div class="mt-3">
+            <h6 class="text-warning">SSL Support</h6>
+            <p><a href="tel:01712810106" class="footer-link">01712810106</a></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Important Links -->
+      <div class="col-lg-2 col-md-6">
+        <h5 class="footer-title">Important Links</h5>
+        <ul class="footer-links">
+          <li><a href="#" class="footer-link">Cart</a></li>
+          <li><a href="#" class="footer-link">New Books</a></li>
+          <li><a href="#" class="footer-link">Write & Win</a></li>
+          <li><a href="#" class="footer-link">TraID Bin</a></li>
+          <li><a href="#" class="footer-link">Our Book School</a></li>
+          <li><a href="#" class="footer-link">Corporate Order</a></li>
+        </ul>
+      </div>
+
+      <!-- Services -->
+      <div class="col-lg-2 col-md-6">
+        <h5 class="footer-title">Services</h5>
+        <ul class="footer-links">
+          <li><a href="#" class="footer-link">Fast Delivery</a></li>
+          <li><a href="#" class="footer-link">Secure Payment</a></li>
+          <li><a href="#" class="footer-link">On-Time Delivery</a></li>
+          <li><a href="#" class="footer-link">Support Service</a></li>
+          <li><a href="#" class="footer-link">Product Guarantee</a></li>
+          <li><a href="#" class="footer-link">Terms & Conditions</a></li>
+        </ul>
+      </div>
+
+      <!-- About -->
+      <div class="col-lg-2 col-md-6">
+        <h5 class="footer-title">About Us</h5>
+        <ul class="footer-links">
+          <li><a href="#" class="footer-link">About Us</a></li>
+          <li><a href="#" class="footer-link">Civil Policy</a></li>
+          <li><a href="#" class="footer-link">Return Policy</a></li>
+          <li><a href="#" class="footer-link">Privacy Policy</a></li>
+          <li><a href="#" class="footer-link">Terms & Conditions</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Social Media & Payment -->
+    <div class="row mt-4 pt-4 border-top border-secondary">
+      <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+        <h6 class="text-warning mb-3">Social Media</h6>
+        <div class="social-icons">
+          <a href="#" class="social-icon"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="social-icon"><i class="bi bi-twitter"></i></a>
+          <a href="#" class="social-icon"><i class="bi bi-youtube"></i></a>
+          <a href="#" class="social-icon"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="social-icon"><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+      <div class="col-md-6 text-center text-md-end">
+        <h6 class="text-warning mb-3">Payment Methods</h6>
+        <div class="payment-methods">
+          <span class="payment-icon"><i class="bi bi-credit-card-fill"></i> Visa</span>
+          <span class="payment-icon"><i class="bi bi-credit-card-fill"></i> Master</span>
+          <span class="payment-icon"><i class="bi bi-credit-card-fill"></i> Amex</span>
+          <span class="payment-icon"><i class="bi bi-wallet2"></i> bKash</span>
+          <span class="payment-icon"><i class="bi bi-wallet2"></i> Nagad</span>
+        </div>
+        <div class="mt-3">
+          <button class="btn btn-sm btn-warning me-2">English</button>
+          <button class="btn btn-sm btn-outline-light">বাংলা</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Copyright Section -->
+  <div class="footer-bottom">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6 text-center text-md-start">
+          <div class="footer-logo mb-2">
+            <i class="bi bi-book-half"></i> <span class="fw-bold">Smart Bookshop</span>
+          </div>
+        </div>
+        <div class="col-md-6 text-center text-md-end">
+          <p class="mb-0">Copyright © 2012 - 2026 Smart Bookshop. All rights reserved by Jayan Afaq</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>

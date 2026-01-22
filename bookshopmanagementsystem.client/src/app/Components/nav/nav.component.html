@@ -1,0 +1,67 @@
+<!-- Complete Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm sticky-top">
+  <div class="container-fluid px-4">
+    <!-- Logo/Brand -->
+    <a class="navbar-brand fw-bold fs-4 d-flex align-items-center" [routerLink]="['/home']">
+      <i class="bi bi-book-fill me-2"></i> Smart Bookshop
+    </a>
+
+    <!-- Mobile Toggle Button -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar Content -->
+    <div class="collapse navbar-collapse" id="navbarContent">
+      <!-- Navigation Links (Left/Center) -->
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link px-3" [routerLink]="['/home']" routerLinkActive="active">
+            <i class="bi bi-house-fill me-1"></i> Home
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link px-3" [routerLink]="['/books']" routerLinkActive="active">
+            <i class="bi bi-book me-1"></i> Book List
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link px-3" [routerLink]="['/addBook']" routerLinkActive="active">
+            <i class="bi bi-plus-circle me-1"></i> Add New Book
+          </a>
+        </li>
+      </ul>
+
+      <!-- Search Box (Center/Right) -->
+      <form class="d-flex me-3 flex-grow-1 flex-lg-grow-0" style="max-width: 400px;">
+        <div class="input-group">
+          <input class="form-control"
+                 type="search"
+                 placeholder="Search books..."
+                 aria-label="Search">
+          <button class="btn btn-warning" type="submit">
+            <i class="bi bi-search"></i>
+          </button>
+        </div>
+      </form>
+
+      <!-- Right Side Actions (Login & Cart) -->
+      <div class="d-flex align-items-center gap-2">
+        <!-- Login Button -->
+        <button class="btn btn-outline-light btn-sm d-flex align-items-center"
+                [routerLink]="['/login']">
+          <i class="bi bi-person-fill me-1"></i> Login
+        </button>
+
+        <!-- Cart Button -->
+        <button class="btn btn-light btn-sm position-relative d-flex align-items-center">
+          <i class="bi bi-cart3 me-1"></i>
+          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+            0
+            <span class="visually-hidden">items in cart</span>
+          </span>
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>

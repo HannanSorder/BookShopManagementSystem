@@ -1,0 +1,18 @@
+.card {
+  border-radius: 15px;
+}
+
+.btn {
+  border-radius: 20px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+  .btn:hover {
+    transform: scale(1.05);
+  }
+
+.form-control:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+}
